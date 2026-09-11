@@ -92,17 +92,69 @@ A high-performance, editorial-grade web application built for **AG Hair Studio (
 
 ### Installation
 
-1. **Install dependencies:**
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/v-urit/AG-Hair-Studio.git
+   cd AG-Hair-Studio
+   ```
+
+2. **Navigate into the frontend folder:**
+   ```bash
+   cd frontend
+   ```
+
+3. **Install dependencies:**
    ```bash
    pnpm install
    ```
 
-2. **Start the local development server:**
+4. **Start the local development server:**
    ```bash
    pnpm dev
    ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your web browser.
+5. Open [http://localhost:3000](http://localhost:3000) in your web browser.
+
+---
+
+## 📦 Project Directory Structure
+
+```text
+AG-Hair-Studio/
+├── frontend/
+│   ├── app/
+│   │   ├── admin/                    # Salon Director management console & client CRM
+│   │   ├── booking/                  # Multi-step hair reservation flow
+│   │   ├── dashboard/                # Client portal for viewing appointments
+│   │   ├── login/                    # Unified Phone + OTP authentication page
+│   │   ├── signup/                   # Redirects cleanly to /login
+│   │   ├── globals.css               # Design system tokens, @custom-variant dark & keyframes
+│   │   ├── layout.tsx                # Root layout with ThemeProvider, Metadata & JsonLd
+│   │   └── page.tsx                  # Landing page (Hero, Bento, Stylists, Marquee, Hours)
+│   ├── components/
+│   │   ├── admin/                    # Admin revenue charts, metrics & client lists
+│   │   ├── ui/                       # Radix UI + shadcn atomic components (button, card, dialog...)
+│   │   ├── footer.tsx                # Minimalist grid footer
+│   │   ├── hero-section.tsx          # Architectural hero banner
+│   │   ├── location-hours.tsx        # Ross Rd live hours & Google Maps integration
+│   │   ├── marquee-gallery.tsx       # 60fps continuous transformation marquee
+│   │   ├── navbar.tsx                # Responsive floating glass dock header
+│   │   ├── services-bento.tsx        # 5-card luxury services bento grid
+│   │   ├── team-reveal-grid.tsx      # Agnes Burke & artistic team showcase
+│   │   ├── testimonials.tsx          # Verified Google reviews
+│   │   └── theme-toggle.tsx          # Smooth light/dark theme switch
+│   ├── lib/
+│   │   ├── mock-data.ts              # In-memory reactive demo store & seed records
+│   │   ├── utils.ts                  # cn (clsx + twMerge) utility helper
+│   │   └── validations.ts            # Zod validation schemas for forms
+│   ├── public/                       # Static imagery and assets
+│   ├── package.json
+│   ├── postcss.config.mjs
+│   ├── tsconfig.json
+│   └── next.config.ts
+├── .agents/                          # Agentic workflow protocols
+└── README.md                         # Project documentation
+```
 
 ---
 
@@ -111,6 +163,7 @@ A high-performance, editorial-grade web application built for **AG Hair Studio (
 To test and compile a production bundle:
 
 ```bash
+cd frontend
 pnpm build
 ```
 
@@ -121,4 +174,3 @@ This verifies full TypeScript type safety, static optimization, and route render
 ## 📄 License & Attribution
 
 Designed and developed for **Agnes Burke Hairdressing (AG Hair Studio)**, Mullingar, Ireland. All rights reserved.
-
